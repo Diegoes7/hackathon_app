@@ -4,6 +4,7 @@
 	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 	grid-column: 1 / -1; /* Make this card span the full width of the grid */
 	padding: 20px 20px; /* Add horizontal padding */
+	margin-top: 1em;
 }
 
 .mental-health-report-card h2 {

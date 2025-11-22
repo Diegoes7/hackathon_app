@@ -8,12 +8,14 @@
     margin-bottom: 20px;
     color: #495057;
     font-size: 0.9em;
+    
 }
 
 .user-details {
     display: flex;
     align-items: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .user-avatar {
