@@ -1,0 +1,95 @@
+.mental-health-report-card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    grid-column: 1 / -1; /* Make this card span the full width of the grid */
+    padding: 20px 20px; /* Add horizontal padding */
+}
+
+.mental-health-report-card h2 {
+    color: #0056b3;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 10px;
+}
+
+.report-content {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    gap: 20px;
+}
+
+.ratings-grid {
+    flex: 0 0 250px; /* Fixed width for ratings grid, adjust as needed */
+    display: flex; /* Change to flex */
+    flex-direction: column; /* Stack items vertically */
+    gap: 15px; /* Gap between rating items */
+    margin-bottom: 0; /* Remove bottom margin as it's part of flex now */
+}
+
+.rating-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e9e9e9;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.rating-label {
+    font-weight: 500;
+}
+
+.rating-score {
+    font-weight: bold;
+    font-size: 1.1em;
+    color: #0056b3;
+}
+
+.analysis-section {
+    flex-grow: 1; /* Allows the analysis section to take up remaining space */
+}
+
+.analysis-section h3 {
+    margin-bottom: 15px;
+}
+
+.summary-text {
+    font-style: italic;
+    color: #333;
+}
+
+.report-subsection {
+    margin-bottom: 15px;
+}
+
+.report-subsection h4 {
+    color: #0056b3;
+    margin-bottom: 8px;
+}
+
+.report-subsection p,
+.report-subsection ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.critical-alert {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.loading-section {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2em;
+    color: #888;
+}
+
+.critical-alert h4 {
+    color: #721c24;
+}
