@@ -133,7 +133,7 @@ const MentalHealthReport: React.FC<MentalHealthReportProps> = ({
 	const labelsBG: { [key: string]: string } = {
 		'Aggression Rate': 'Ниво на агресия',
 		'Emotional Status': 'Ниво на стрес',
-		'Suicide Thinking': 'Мисли за самоубийство',
+		'Suicide Thinking': 'Суицидност',
 		'Mental Health Stability': 'Елементи на депресия',
 		'Social Interaction': 'Интровертност',
 	};
