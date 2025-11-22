@@ -124,7 +124,7 @@ const Dashboard: React.FC = () => {
             // Simulate loading
             setTimeout(() => setIsDashboardLoading(false), 300);
         }
-    }, [selectedChildId, timeline, allChildrenData]);
+    }, [selectedChildId, timeline, allChildrenData, selectedChildData]);
 
 
     const handleChildChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
