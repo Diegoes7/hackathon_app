@@ -14,9 +14,15 @@
     padding-bottom: 10px;
 }
 
+.recommendations-section {
+    margin-bottom: 25px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 20px;
+}
+
 .report-content {
     display: flex;
-    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    flex-wrap: nowrap; /* Allow wrapping on smaller screens */
     gap: 20px;
 }
 

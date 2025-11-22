@@ -1,11 +1,13 @@
 import React from 'react';
 import './App.css';
 import Dashboard from './components/dashboard/Dashboard';
+import UserInfo from './components/userInfo/UserInfo';
 
 function App() {
 	return (
 		<div className='App'>
 			<h1>Welcome to Plug-in Browser</h1>
+      <UserInfo />
 			<Dashboard />
 			{/* <MentalHealthReport /> */}
 		</div>

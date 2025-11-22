@@ -138,6 +138,27 @@ const MentalHealthReport: React.FC = () => {
 		<div className='mental-health-report-card'>
 			<h2>Personality & Mental Health Report</h2>
 
+			<div className='recommendations-section'>
+				{analysis.criticalAlerts && analysis.criticalAlerts.length > 0 && (
+					<div className='report-subsection critical-alert'>
+						<h4>Critical Alerts</h4>
+						{analysis.criticalAlerts.map((alert: any, index: any) => (
+							<p key={index}>{alert}</p>
+						))}
+					</div>
+				)}
+				{analysis.recommendations && analysis.recommendations.length > 0 && (
+					<div className='report-subsection'>
+						<h4>Recommendations</h4>
+						<ul>
+							{analysis.recommendations.map((rec, index) => (
+								<li key={index}>{rec}</li>
+							))}
+						</ul>
+					</div>
+				)}
+			</div>
+
 			<div className='report-content'>
 				<div className='ratings-grid'>
 					{reportData.map((item) => (
@@ -153,30 +174,10 @@ const MentalHealthReport: React.FC = () => {
 						Summary: <span className='summary-text'>{analysis.summary}</span>
 					</h3>
 
-					{analysis.criticalAlerts && analysis.criticalAlerts.length > 0 && (
-						<div className='report-subsection critical-alert'>
-							<h4>Critical Alerts</h4>
-							{analysis.criticalAlerts.map((alert: any, index: any) => (
-								<p key={index}>{alert}</p>
-							))}
-						</div>
-					)}
-
 					<div className='report-subsection'>
 						<h4>Detailed Analysis</h4>
 						<p>{analysis.report}</p>
 					</div>
-
-					{analysis.recommendations && analysis.recommendations.length > 0 && (
-						<div className='report-subsection'>
-							<h4>Recommendations</h4>
-							<ul>
-								{analysis.recommendations.map((rec, index) => (
-									<li key={index}>{rec}</li>
-								))}
-							</ul>
-						</div>
-					)}
 				</div>
 			</div>
 		</div>
