@@ -6,8 +6,8 @@ import UserInfo from './components/userInfo/UserInfo';
 function App() {
 	return (
 		<div className='App'>
-			<h1>Welcome to Plug-in Browser</h1>
-      <UserInfo />
+			<h1>Добре дошли в Пазител</h1>
+			{/* <UserInfo /> */}
 			<Dashboard />
 			{/* <MentalHealthReport /> */}
 		</div>
