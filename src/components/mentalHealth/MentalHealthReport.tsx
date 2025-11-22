@@ -18,10 +18,11 @@ const generateAnalysis = (data: ReportDataItem[]) => {
 
 	const labelsBG: { [key: string]: string } = {
 		'Aggression Rate': 'Ниво на агресия',
-		'Emotional Status': 'Емоционален статус',
+		'Emotional Status': 'Ниво на стрес',
 		'Suicide Thinking': 'Мисли за самоубийство',
-		'Mental Health Stability': 'Стабилност на менталното здраве',
+		'Mental Health Stability': 'Склоност към насилие',
 		'Social Interaction': 'Социално взаимодействие',
+        '': 'Тревожност'
 	};
 
 	data.forEach((item) => {
@@ -131,10 +132,10 @@ const MentalHealthReport: React.FC<MentalHealthReportProps> = ({
 	const analysis = generateAnalysis(reportData);
 	const labelsBG: { [key: string]: string } = {
 		'Aggression Rate': 'Ниво на агресия',
-		'Emotional Status': 'Емоционален статус',
+		'Emotional Status': 'Ниво на стрес',
 		'Suicide Thinking': 'Мисли за самоубийство',
-		'Mental Health Stability': 'Стабилност на менталното здраве',
-		'Social Interaction': 'Социално взаимодействие',
+		'Mental Health Stability': 'Елементи на депресия',
+		'Social Interaction': 'Интровертност',
 	};
 
 	const getRatingColorClass = (score: number): string => {
@@ -150,6 +151,21 @@ const MentalHealthReport: React.FC<MentalHealthReportProps> = ({
 	return (
 		<div className='mental-health-report-card'>
 			<h2>Доклад за личност и психично здраве</h2>
+
+            <div className='report-content'>
+				<div className='ratings-grid'>
+					{reportData.map((item) => (
+						<div
+							key={item.label}
+							className={`rating-item ${getRatingColorClass(item.score)}`}
+						>
+							<span className='rating-label'>
+								{labelsBG[item.label] || item.label}
+							</span>
+							<span className='rating-score'>{item.score}/10</span>
+						</div>
+					))}
+				</div>
 
 			<div className='recommendations-section'>
 				{analysis.criticalAlerts && analysis.criticalAlerts.length > 0 && (
@@ -172,20 +188,6 @@ const MentalHealthReport: React.FC<MentalHealthReportProps> = ({
 				</div>
 			</div>
 
-			<div className='report-content'>
-				<div className='ratings-grid'>
-					{reportData.map((item) => (
-						<div
-							key={item.label}
-							className={`rating-item ${getRatingColorClass(item.score)}`}
-						>
-							<span className='rating-label'>
-								{labelsBG[item.label] || item.label}
-							</span>
-							<span className='rating-score'>{item.score}/10</span>
-						</div>
-					))}
-				</div>
 				{analysis.recommendations && analysis.recommendations.length > 0 && (
 					<div className='report-subsection'>
 						<h4>Препоръки</h4>

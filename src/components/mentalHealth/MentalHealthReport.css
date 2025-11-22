@@ -21,7 +21,7 @@
 }
 
 .report-content {
-	display: flex;
+	/* display: flex; */
 	flex-wrap: nowrap; /* Allow wrapping on smaller screens */
 	gap: 20px;
 }

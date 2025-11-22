@@ -1,10 +1,8 @@
 .user-info-bar {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribute items more evenly */
+    justify-content: space-between;
     align-items: center;
-    gap: 40px; /* Increased gap for more space */
-    padding: 15px 25px; /* Adjusted padding */
+    padding: 15px 25px;
     background-color: #e9ecef;
     border-radius: 8px;
     margin-bottom: 20px;
@@ -12,11 +10,17 @@
     font-size: 0.9em;
 }
 
+.user-details {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
 .user-avatar {
     width: 50px;
     height: 50px;
-    border-radius: 50%; /* Make the image rounded */
-    object-fit: cover; /* Ensure the image covers the area nicely */
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .user-info-item {
@@ -27,4 +31,8 @@
 
 .user-info-item strong {
     color: #343a40;
+}
+
+.child-selector-container {
+    /* This container helps in alignment if more items are added */
 }
